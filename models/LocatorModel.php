@@ -13,7 +13,7 @@
 
 namespace Craft;
 
-class GeoLocatorModel extends BaseModel
+class LocatorModel extends BaseModel
 {
     /**
      * Defines this model's attributes.

@@ -1,7 +1,7 @@
 <?php
 namespace Craft;
 
-class GeoLocatorPlugin extends BasePlugin
+class LocatorPlugin extends BasePlugin
 {
 	/**
 	 * @return mixed
@@ -18,7 +18,7 @@ class GeoLocatorPlugin extends BasePlugin
 	 */
 	public function getName()
 	{
-		 return Craft::t('GeoLocator');
+		 return Craft::t('Locator');
 	}
 
 	/**
@@ -118,7 +118,7 @@ class GeoLocatorPlugin extends BasePlugin
 		return [
 			'apiKey' => [
 				AttributeType::String,
-				'label' => 'MapBox API Key',
+				'label' => 'GeoCodio API Key',
 				'default' => ''
 			],
 		];
