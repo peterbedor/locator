@@ -1,1 +1,20 @@
-{"pluginName":"GeoLocator","pluginDescription":"A simple plugin to geolocate and store location based information with an entry","pluginVersion":"0.1.0","pluginAuthorName":"Peter Bedor","pluginAuthorUrl":"https://www.bedor.me","pluginAuthorGithub":"","codeComments":"yes","pluginComponents":["controllers","fieldtypes","models","records","services","settings"],"controllerName":"","elementName":"","fieldName":"","modelName":"","purchasableName":"","recordName":"","serviceName":"","taskName":"","widgetName":"","apiVersion":"api_version_2_5"}
+{
+   "pluginName":"Locator",
+   "pluginDescription":"A simple plugin to geolocate and store location based information with an entry",
+   "pluginVersion":"0.1.0",
+   "pluginAuthorName":"Peter Bedor",
+   "pluginAuthorUrl":"https://www.bedor.me",
+   "pluginAuthorGithub":"https://github.com/peterbedor/",
+   "codeComments":"yes",
+   "pluginComponents":[
+      "fieldtypes",
+      "models",
+      "records",
+      "services",
+      "settings"
+   ],
+   "fieldName":"Locator",
+   "modelName":"Locator",
+   "recordName":"Locator",
+   "apiVersion":"api_version_2_5"
+}

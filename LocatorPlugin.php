@@ -40,7 +40,7 @@ class LocatorPlugin extends BasePlugin
 	 */
 	public function getDocumentationUrl()
 	{
-		return '???';
+		return 'https://github.com/peterbedor/locator/blob/develop/README.md';
 	}
 
 	/**
@@ -52,7 +52,7 @@ class LocatorPlugin extends BasePlugin
 	 */
 	public function getReleaseFeedUrl()
 	{
-		return '???';
+		return 'https://github.com/peterbedor/locator/blob/develop/.craftplugin';
 	}
 
 	/**
