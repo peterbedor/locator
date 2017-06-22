@@ -131,7 +131,7 @@ class LocatorPlugin extends BasePlugin
 	 */
 	public function getSettingsHtml()
 	{
-	   return craft()->templates->render('geolocator/settings', [
+	   return craft()->templates->render('locator/settings', [
 		   'settings' => $this->getSettings()
 	   ]);
 	}
