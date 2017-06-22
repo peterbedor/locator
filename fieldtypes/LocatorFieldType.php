@@ -2,7 +2,7 @@
 
 namespace Craft;
 
-class GeoLocatorFieldType extends BaseFieldType
+class LocatorFieldType extends BaseFieldType
 {
 	/**
 	 * Returns the name of the fieldtype.
@@ -11,7 +11,7 @@ class GeoLocatorFieldType extends BaseFieldType
 	 */
 	public function getName()
 	{
-		return Craft::t('GeoLocator');
+		return Craft::t('Locator');
 	}
 
 	/**
@@ -34,7 +34,7 @@ class GeoLocatorFieldType extends BaseFieldType
 	public function getInputHtml($name, $value)
 	{
 		if (! $value) {
-			$value = new GeoLocatorModel();
+			$value = new LocatorModel();
 		}
 
 		$id = craft()->templates->formatInputId($name);
@@ -43,25 +43,30 @@ class GeoLocatorFieldType extends BaseFieldType
 		// Include JS and CSS
 		$this->includeResources([
 			'css' => [
-				'geolocator/css/fields/vendor/autocomplete.css'
+				'locator/css/fields/vendor/autocomplete.css'
 			],
 			'js' => [
-				'geolocator/js/fields/vendor/autocomplete.js',
-				'geolocator/js/fields/fieldType.js'
+				'locator/js/fields/vendor/autocomplete.js',
+				'locator/js/fields/locator.js'
 			],
 		]);
 
-		$settings = craft()->plugins->getPlugin($this->getName())->getSettings();
-		$apiKey = $settings->getAttribute('apiKey');
+		$jsonVars = json_encode([
+			'id' => $id,
+			'name' => $name,
+			'namespace' => $namespacedId,
+			'prefix' => craft()->templates->namespaceInputId(''),
+			'apiKey' => craft()->plugins->getPlugin($this->getName())->getSettings()->getAttribute('apiKey'),
+		]);
+
+		craft()->templates->includeJs("$('#{$namespacedId}-field').LocatorFieldType({$jsonVars});");
 
 		return craft()->templates->render(
-			'geolocator/fields/fieldType.twig',
+			'locator/fields/fieldType.twig',
 			[
 				'id' => $id,
 				'name' => $name,
-				'namespaceId' => $namespacedId,
-				'values' => $value,
-				'apiKey' => $apiKey,
+				'values' => $value
 			]
 		);
 	}
