@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <g id="icon" fill-rule="nonzero" fill="#518CB1">
+                <path d="M32.6,7.5 C26.8,-0.6 15.5,-2.4 7.5,3.4 C-0.6,9.2 -2.4,20.5 3.4,28.5 C9.2,36.6 20.5,38.4 28.5,32.6 C36.6,26.8 38.4,15.5 32.6,7.5 Z" id="Shape"></path>
+            </g>
+            <text id="L" font-family="AdelleSans-Bold, Adelle Sans" font-size="18" font-weight="bold" fill="#FFFFFF">
+                <tspan x="14" y="24">L</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

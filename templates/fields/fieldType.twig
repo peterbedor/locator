@@ -1,0 +1,29 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+	id: id ~ '_address',
+	class: 'nicetext',
+	name: name ~ '[address]',
+	value: values.address,
+	required: false,
+}) }}
+
+{{ forms.hidden({
+	id: id ~ '_latitude',
+	name: name ~ '[latitude]',
+	value: values.latitude,
+	required: false,
+}) }}
+
+{{ forms.hidden({
+	id: id ~ '_longitude',
+	name: name ~ '[longitude]',
+	value: values.longitude,
+	required: false,
+}) }}
+
+{% includejs %}
+	new GeoLocator({
+		apiKey: '{{ apiKey }}'
+	});
+{% endincludejs %}

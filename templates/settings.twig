@@ -1,0 +1,9 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+	label: 'GeoCodio API Key',
+	instructions: 'Enter your GeoCodio API key here.',
+	id: 'apiKey',
+	name: 'apiKey',
+	value: settings['apiKey']
+}) }}

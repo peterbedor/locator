@@ -1,0 +1,9 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+	label: 'MapBox API Key',
+	instructions: 'Enter your MapBox API key here.',
+	id: 'mapboxApiKey',
+	name: 'mapboxApiKey',
+	value: settings['mapboxApiKey']
+}) }}
